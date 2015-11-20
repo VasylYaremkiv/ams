@@ -1,0 +1,27 @@
+#new_user {
+  width: 300px;
+  border: 2px solid #BBBBBB;
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: #dddddd;
+
+  input[type=text], input[type=password] {
+    width: 100%;
+  }
+}
+
+#new_user, .edit_user, .edit_profile {
+  width: 300px;
+}
+
+.button_to {
+  display: inline-block;
+  margin-left: 15px;
+
+  input[type=submit] {
+    background:none!important;
+    border:none;
+    padding:0!important;
+    color: red;
+  }
+}
