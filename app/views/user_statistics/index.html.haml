@@ -1,0 +1,6 @@
+- @user_statistics.each do |user_statistic|
+  .row
+    .col-md-2= user_statistic.user.token
+    .col-md-1= I18n.l(user_statistic.created_at, format: :datetime)
+    .col-md-1= user_statistic.api_method
+    .col-md-4= user_statistic.params

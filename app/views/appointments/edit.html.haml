@@ -1,0 +1,13 @@
+.top-menu-links
+  = link_to 'Appointments', appointments_path
+
+= form_for(@appointment) do |f|
+  - @appointment.errors.full_messages.each do |msg|
+    %p.error-message= msg
+
+  .form-group
+    = f.label :status
+    %br
+    = f.select :status, Appointment::AVAILABLE_STATUSES
+  .actions
+    = f.submit 'Update', class: 'btn btn-primary'

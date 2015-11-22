@@ -8,7 +8,14 @@ class User < ActiveRecord::Base
   CUSTOMER = 'customer'
   ADMIN = 'admin'
 
+  has_many :appointments
+  has_many :user_statistics
+
   before_create :generate_token
+
+  def admin?
+    role == ADMIN
+  end
 
   private
 

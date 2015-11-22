@@ -9,6 +9,9 @@
   %body
     .container
       - if current_user
-        = button_to 'Logout', destroy_user_session_path, method: :delete, class: 'media'
+        .navbar-text.navbar-right
+          = button_to 'Logout', destroy_user_session_path, method: :delete, class: 'media'
+        .navbar-text.navbar-right
+          = link_to 'User Statistics', user_statistics_path, class: 'media'
 
       = yield

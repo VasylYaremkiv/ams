@@ -1,0 +1,15 @@
+.top-menu-links
+  = link_to 'Appointments', appointments_path
+
+%ul.nav.nav-pills
+  %li{ role: 'presentation' }
+    = link_to 'All', past_appointments_path
+  %li{ role: 'presentation' }
+    = link_to 'Pending', past_appointments_path(status: 'pending')
+  %li{ role: 'presentation' }
+    = link_to 'Confirmed', past_appointments_path(status: 'confirmed')
+  %li{ role: 'presentation' }
+    = link_to 'Cancelled', past_appointments_path(status: 'cancelled')
+
+
+= render 'appointments'

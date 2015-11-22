@@ -1,0 +1,28 @@
+.top-menu-links
+  = link_to 'Appointments', appointments_path
+
+= form_for(@appointment) do |f|
+  - @appointment.errors.full_messages.each do |msg|
+    %p.error-message= msg
+
+  .form-group
+    = f.label :description
+    %br
+    = f.text_area :description, class: 'form-control'
+
+  .form-group
+    = f.label :start_at
+    %br
+    = f.datetime_select :start_at, ampm: true, minute_step: 15, class: 'form-control'
+
+  .form-group
+    = f.label :reminders
+
+    = f.fields_for :reminders do |reminder|
+      = render 'reminder_fields', f: reminder
+
+    .links
+      = link_to_add_association 'Add reminder', f, :reminders
+
+  .actions
+    = f.submit 'Create', class: 'btn btn-primary'

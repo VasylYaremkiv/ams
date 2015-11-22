@@ -1,0 +1,12 @@
+.nested-fields
+  .form-group
+    = f.label :description
+    %br
+    = f.text_area :description, class: 'form-control'
+
+  .form-group
+    = f.label :remind_at
+    %br
+    = f.datetime_select :remind_at, ampm: true, minute_step: 5, class: 'form-control'
+
+  = link_to_remove_association "Remove reminder", f

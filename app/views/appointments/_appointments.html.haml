@@ -1,0 +1,11 @@
+.list-group
+  - @appointments.each do |appointment|
+    = link_to edit_appointment_path(appointment), class: 'list-group-item' do
+      .row
+        .col-md-2= I18n.l(appointment.start_at, format: :datetime)
+        .col-md-7= appointment.description
+        .col-md-2
+          - appointment.reminders.each do |reminder|
+            = I18n.l(reminder.remind_at, format: :datetime)
+        .col-md-1
+          .label.label-primary= appointment.status

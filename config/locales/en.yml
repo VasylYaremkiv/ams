@@ -20,4 +20,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  time:
+    formats:
+      datetime: '%b. %e at %-l:%M %P' # Oct. 17 at 3:17 pm
+
+  activerecord:
+    errors:
+      models:
+        appointment:
+          attributes:
+            start_at:
+              passed: is passed.
+              overlap: is overlap with other appointment.
+

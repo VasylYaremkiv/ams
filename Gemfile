@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'haml-rails'
 gem 'pg'
+gem 'cocoon'
+gem 'sidekiq'
 
 
 # Use ActiveModel has_secure_password

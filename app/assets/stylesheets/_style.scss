@@ -14,6 +14,10 @@
   width: 300px;
 }
 
+.navbar-text {
+  margin-top: 0 !important;
+}
+
 .button_to {
   display: inline-block;
   margin-left: 15px;
@@ -23,5 +27,16 @@
     border:none;
     padding:0!important;
     color: red;
+  }
+}
+
+.top-menu-links {
+  margin: 15px 0;
+}
+
+.list-group-item {
+  .appointment-status {
+    //float: right;
+    //margin-top: -18px;
   }
 }
